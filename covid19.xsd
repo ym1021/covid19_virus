@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+   <xs:element name="virus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="바이러스"/>
+        <xs:element ref="코로나19"/>
+      </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+
+   <xs:element name="바이러스">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element ref="바이러스정의"/>
+         <xs:element name="추가정보" type="xs:anyURI"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="바이러스정의">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+         <xs:element name="셋째" type="xs:string"/>
+       </xs:sequence>
+       <xs:attribute name="type" type="xs:string" use="required"/>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="코로나19">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element ref="코로나19정의"/>
+         <xs:element ref="관리"/>
+         <xs:element ref="백신"/>
+         <xs:element ref="NEWS"/>
+         <xs:element name="추가정보" type="xs:anyURI"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="코로나19정의">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="요약" type="xs:string"/>
+         <xs:element name="형태" type="xs:string"/>
+         <xs:element name="병원체" type="xs:string"/>
+         <xs:element ref="전파경로"/>
+         <xs:element name="잠복기" type="xs:string"/>
+         <xs:element name="진단기준" type="xs:string"/>
+         <xs:element ref="증상"/>
+         <xs:element ref="치료"/>
+         <xs:element name="치명률" type="xs:string"/>
+         <xs:element ref="예방"/>
+         <xs:element name="추가정보" type="xs:anyURI"/>
+       </xs:sequence>
+       <xs:attribute name="type" type="xs:string" use="required"/>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="전파경로">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="증상">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="임상증상" type="xs:string"/>
+         <xs:element name="주요증상" type="xs:string"/>
+         <xs:element name="기타" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="치료">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+         <xs:element name="셋째" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="예방">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+         <xs:element name="셋째" type="xs:string"/>
+         <xs:element name="넷째" type="xs:string"/>
+         <xs:element name="다섯째" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   
+   
+   <xs:element name="관리">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element ref="확진"/>
+         <xs:element ref="행동수칙"/>
+         <xs:element ref="확진자치료"/>
+         <xs:element ref="격리해제"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="확진">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="확진환자" type="xs:string"/>
+         <xs:element name="의사환자" type="xs:string"/>
+         <xs:element ref="조사대상"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+  <xs:element name="조사대상">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+         <xs:element name="셋째" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>   
+   
+   <xs:element name="행동수칙">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element ref="의심"/>
+         <xs:element ref="검사"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="의심">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="검사">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="확진자치료">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+         <xs:element name="셋째" type="xs:string"/>
+         <xs:element name="넷째" type="xs:string"/>
+         <xs:element name="다섯째" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="격리해제">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element ref="증상있는경우"/>
+         <xs:element ref="증상없는경우"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="증상있는경우">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="임상경과기반기준" type="xs:string"/>
+         <xs:element name="검사기반기준" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="증상없는경우">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="임상경과기반기준" type="xs:string"/>
+         <xs:element name="검사기반기준" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   
+   
+   <xs:element name="백신">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="추가정보" type="xs:anyURI"/>
+         <xs:element ref="백신정의"/>
+         <xs:element name="이유" type="xs:string"/>
+         <xs:element ref="종류"/>
+         <xs:element ref="소개"/>
+         <xs:element ref="백신특징"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="백신정의">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+         <xs:element name="셋째" type="xs:string"/>
+         <xs:element name="넷째" type="xs:string"/>
+       </xs:sequence>
+       <xs:attribute name="type" type="xs:string" use="required"/>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="종류">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element ref="mRnA"/>
+         <xs:element ref="바이러스벡터"/>
+         <xs:element ref="주의"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="mRnA">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+         <xs:element name="셋째" type="xs:string"/>
+         <xs:element name="넷째" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="바이러스벡터">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+         <xs:element name="셋째" type="xs:string"/>
+         <xs:element name="넷째" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="주의">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="접종현황">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="접종완료" type="xs:decimal"/>
+         <xs:element name="추가접종" type="xs:decimal"/>
+         <xs:element name="일차접종" type="xs:decimal"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="소개">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="첫째" type="xs:string"/>
+         <xs:element name="둘째" type="xs:string"/>
+         <xs:element name="셋째" type="xs:string"/>
+         <xs:element name="넷째" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="백신특징">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element ref="화이자"/>
+         <xs:element ref="모더나"/>
+         <xs:element ref="아스트라제네카"/>
+         <xs:element ref="얀센"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="화이자">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="제조사" type="xs:string"/>
+         <xs:element name="백신명" type="xs:string"/>
+         <xs:element name="연령" type="xs:string"/>
+         <xs:element name="구성" type="xs:string"/>
+         <xs:element name="접종횟수" type="xs:string"/>
+         <xs:element name="접종량및방법" type="xs:string"/>
+         <xs:element name="보관" type="xs:string"/>
+         <xs:element name="유통" type="xs:string"/>
+         <xs:element name="개봉후유효기간" type="xs:string"/>
+       </xs:sequence>
+       <xs:attribute name="kind" type="xs:string" use="required"/>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="모더나">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="제조사" type="xs:string"/>
+         <xs:element name="백신명" type="xs:string"/>
+         <xs:element name="연령" type="xs:string"/>
+         <xs:element name="구성" type="xs:string"/>
+         <xs:element name="접종횟수" type="xs:string"/>
+         <xs:element name="접종량및방법" type="xs:string"/>
+         <xs:element name="보관" type="xs:string"/>
+         <xs:element name="유통" type="xs:string"/>
+         <xs:element name="개봉후유효기간" type="xs:string"/>
+       </xs:sequence>
+       <xs:attribute name="kind" type="xs:string" use="required"/>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="아스트라제네카">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="제조사" type="xs:string"/>
+         <xs:element name="백신명" type="xs:string"/>
+         <xs:element name="연령" type="xs:string"/>
+         <xs:element name="구성" type="xs:string"/>
+         <xs:element name="접종횟수" type="xs:string"/>
+         <xs:element name="접종량및방법" type="xs:string"/>
+         <xs:element name="보관" type="xs:string"/>
+         <xs:element name="유통" type="xs:string"/>
+         <xs:element name="개봉후유효기간" type="xs:string"/>
+       </xs:sequence>
+       <xs:attribute name="kind" type="xs:string" use="required"/>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="얀센">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="제조사" type="xs:string"/>
+         <xs:element name="백신명" type="xs:string"/>
+         <xs:element name="연령" type="xs:string"/>
+         <xs:element name="구성" type="xs:string"/>
+         <xs:element name="접종횟수" type="xs:string"/>
+         <xs:element name="접종량및방법" type="xs:string"/>
+         <xs:element name="보관" type="xs:string"/>
+         <xs:element name="유통" type="xs:string"/>
+         <xs:element name="개봉후유효기간" type="xs:string"/>
+       </xs:sequence>
+       <xs:attribute name="kind" type="xs:string" use="required"/>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="NEWS">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element ref="방역수칙"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="방역수칙">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element ref="식당카페"/>
+         <xs:element ref="영화관공연장"/>
+         <xs:element ref="스포츠경기장"/>
+         <xs:element ref="놀이공원"/>
+         <xs:element ref="종교시설"/>
+       </xs:sequence>
+       <xs:attribute name="date" type="xs:string" use="required"/>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="식당카페">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="운영시간" type="xs:string"/>
+         <xs:element name="밀집도" type="xs:string"/>
+         <xs:element name="이용가능대상" type="xs:string"/>
+         <xs:element name="취식가능여부" type="xs:string"/>
+         <xs:element name="접종증명" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="영화관공연장">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="운영시간" type="xs:string"/>
+         <xs:element name="밀집도" type="xs:string"/>
+         <xs:element name="이용가능대상" type="xs:string"/>
+         <xs:element name="취식가능여부" type="xs:string"/>
+         <xs:element name="접종증명" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="스포츠경기장">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="운영시간" type="xs:string"/>
+         <xs:element name="밀집도" type="xs:string"/>
+         <xs:element name="이용가능대상" type="xs:string"/>
+         <xs:element name="취식가능여부" type="xs:string"/>
+         <xs:element name="접종증명" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="놀이공원">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="운영시간" type="xs:string"/>
+         <xs:element name="밀집도" type="xs:string"/>
+         <xs:element name="이용가능대상" type="xs:string"/>
+         <xs:element name="취식가능여부" type="xs:string"/>
+         <xs:element name="접종증명" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+   
+   <xs:element name="종교시설">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="운영시간" type="xs:string"/>
+         <xs:element name="밀집도" type="xs:string"/>
+         <xs:element name="이용가능대상" type="xs:string"/>
+         <xs:element name="취식가능여부" type="xs:string"/>
+         <xs:element name="접종증명" type="xs:string"/>
+         <xs:element name="기타" type="xs:string"/>
+       </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+</xs:schema>
